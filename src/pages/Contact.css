@@ -1,0 +1,83 @@
+.contact-container {
+  background-image: url('https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=element5-digital-uE2T1tCFsn8-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 50px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contact-overlay h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.contact-overlay p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #ff7043;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ff5722;
+}
+.popup-message {
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  animation: fadein 0.3s ease-in-out, fadeout 0.3s ease-in-out 2.7s;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}

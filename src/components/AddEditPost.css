@@ -1,0 +1,118 @@
+/* src/components/AddEditPost.css */
+
+.add-post-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-post-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.add-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-post-form input,
+.add-post-form select,
+.add-post-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.add-post-form input:focus,
+.add-post-form select:focus,
+.add-post-form textarea:focus {
+  border-color: #3498db;
+}
+
+.add-post-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.add-post-form button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-post-form button:hover {
+  background-color: #2980b9;
+}
+
+.back-button {
+  background-color: #95a5a6;
+}
+
+.back-button:hover {
+  background-color: #7f8c8d;
+}
+
+.popup-message {
+  margin-top: 20px;
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .add-post-container {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .add-post-heading {
+    font-size: 22px;
+  }
+}
+.add-edit-post-container {
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+  color: white; /* Optional for contrast */
+}

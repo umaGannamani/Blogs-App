@@ -1,0 +1,62 @@
+.bg-posts-container {
+  background-image: url('https://images.unsplash.com/photo-1499063078284-f78f7d89616a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=leio-mclaren-FwdZYz0yc9g-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.posts-container {
+  background: transparent;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.post-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-content {
+  padding: 1rem;
+}
+
+.btn-edit,
+.btn-delete {
+  margin: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
