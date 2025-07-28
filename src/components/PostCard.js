@@ -4,7 +4,7 @@ import "./PostCard.css";
 function PostCard({ post, onEdit, onDelete }) {
   return (
     <div className="post-card">
-      <img className="post-image" src={post.image_url} alt={post.title} />
+      <img className="post-image" src={post.image} alt={post.title} />
       <div className="post-content">
         <h3>{post.title}</h3>
         <p className="description">{post.description}</p>

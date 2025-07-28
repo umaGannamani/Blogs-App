@@ -21,7 +21,7 @@ const AddEditPost = () => {
     const fetchPost = async () => {
       if (id) {
         try {
-          const response = await fetch(`http://localhost:3000/posts/${id}`);
+          const response = await fetch(`https://blogs-backend-smx4.onrender.com/posts/${id}`);
           if (response.ok) {
             const data = await response.json();
             setFormData(data);
@@ -51,8 +51,8 @@ const AddEditPost = () => {
     const isEdit = Boolean(id);
     const method = isEdit ? "PUT" : "POST";
     const url = isEdit
-      ? `http://localhost:3000/posts/${id}`
-      : "http://localhost:3000/posts";
+      ? `https://blogs-backend-smx4.onrender.com/posts/${id}`
+      : "https://blogs-backend-smx4.onrender.com/posts";
 
     try {
       const response = await fetch(url, {

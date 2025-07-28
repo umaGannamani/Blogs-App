@@ -9,7 +9,7 @@ function Posts() {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch("http://localhost:3000/posts/");
+      const response = await fetch("https://blogs-backend-smx4.onrender.com/posts/");
       const data = await response.json();
       setPosts(data);
     } catch (error) {
@@ -29,7 +29,7 @@ function Posts() {
     const confirmDelete = window.confirm("Are you sure you want to delete this post?");
     if (confirmDelete) {
       try {
-        const response = await fetch(`http://localhost:3000/posts/${postId}`, {
+        const response = await fetch(`https://blogs-backend-smx4.onrender.com/posts/${postId}`, {
           method: "DELETE",
         });
 
