@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# 🍽️✈️ Food & Travel Blog Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack blog website where users can browse, add, edit, and delete blog posts related to food and travel. Built using **React.js** (Frontend), **Express.js** and **SQLite** (Backend), with fully responsive design and RESTful API integration.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### ✅ Frontend (React.js)
+- Beautiful responsive UI with gradient hero section and post cards
+- Post filtering by category (Food, Travel)
+- Tag-based search functionality
+- Add/Edit Post forms with validation, calendar input, and success popup
+- Navigation between Home, Posts, Add/Edit, About, and Contact pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ✅ Backend (Node.js + Express.js + SQLite)
+- REST API with full CRUD operations
+- SQLite database (`blogs.db`) to store blog posts
+- JSON-based communication with frontend
+- Deployed on Render
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Layer      | Technology              |
+|------------|--------------------------|
+| Frontend   | React.js, React Router   |
+| Backend    | Node.js, Express.js      |
+| Database   | SQLite                   |
+| Styling    | CSS, Flexbox             |
+| Deployment | Render, vercel                  |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Folder Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+BlogsApp/
+├── client/             # React frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/  # Reusable components (Navbar, Footer, PostCard)
+│   │   ├── pages/       # Pages (Home, Posts, AddEditPost, About, Contact)
+│   │   ├── App.js
+│   │   └── index.js
+│   └── package.json
+├── server/             # Express backend
+│   ├── blogs.db        # SQLite database file
+│   ├── app.js          # Main server file
+│   ├── package.json
+├── .gitignore
+└── README.md
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##  Live URLs
+| Type                    | URL                                                                                            |
+| ----------------------- | ---------------------------------------------------------------------------------------------- |
+| 🔗 Backend API          |	https://blogs-backend-smx4.onrender.com/posts |
+| 🔗 Frontend (if hosted) | https://blogs-app-vert-delta.vercel.app/                                                                            |
 
-### `npm run eject`
+##  API Endpoints
+Get All Posts ---- GET /posts/
+Get Single Post ---- GET /posts/:id/
+Add New Post ---- POST /posts/
+Content-Type: application/json
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+{
+  "title": "Blog Title",
+  "category": "Food",
+  "description": "Blog content...",
+  "author": "Author Name",
+  "date": "YYYY-MM-DD",
+  "tags": "tag1, tag2",
+  "image": "https://example.com/image.jpg"
+}
+Update Post ----- PUT /posts/:id/
+Delete Post ---- DELETE /posts/:id/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##  Local Development Setup
+1. Clone the repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+git clone https://github.com/your-username/blogs-website.git
+cd BlogsApp
+2. Backend Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+cd server
+npm install
+node app.js
+3. Frontend Setup
 
-## Learn More
+cd client
+npm install
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ ##  Deployment
+Backend on Render
+Push your backend code to GitHub.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create a new Render web service.
 
-### Code Splitting
+Use build command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+npm rebuild sqlite3 --build-from-source
+Add start command as:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+node app.js
+Make sure blogs.db is committed or seeded.
